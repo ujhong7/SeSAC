@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D40BC992B269AE000D511A4 /* JuiceMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D40BC982B269AE000D511A4 /* JuiceMenu.swift */; };
+		1D40BC9B2B269AE800D511A4 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D40BC9A2B269AE800D511A4 /* Fruit.swift */; };
+		1D40BC9D2B269AF200D511A4 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D40BC9C2B269AF200D511A4 /* Error.swift */; };
+		1DCBA93F2B1E02D500534397 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCBA93E2B1E02D500534397 /* AppDelegate.swift */; };
+		1DCBA9412B1E02D500534397 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCBA9402B1E02D500534397 /* SceneDelegate.swift */; };
+		1DCBA9462B1E02D500534397 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DCBA9442B1E02D500534397 /* Main.storyboard */; };
+		1DCBA9482B1E02D600534397 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DCBA9472B1E02D600534397 /* Assets.xcassets */; };
+		1DCBA94B2B1E02D600534397 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DCBA9492B1E02D600534397 /* LaunchScreen.storyboard */; };
+		1DCBA9562B1E069E00534397 /* JuiceMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCBA9552B1E069E00534397 /* JuiceMaker.swift */; };
+		1DCBA9582B1E06A900534397 /* FruitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCBA9572B1E06A900534397 /* FruitStore.swift */; };
+		1DCBA95A2B1E06BF00534397 /* JuiceMakingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCBA9592B1E06BF00534397 /* JuiceMakingViewController.swift */; };
+		1DCBA95C2B1E06CE00534397 /* StockManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCBA95B2B1E06CE00534397 /* StockManagementViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D40BC982B269AE000D511A4 /* JuiceMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMenu.swift; sourceTree = "<group>"; };
+		1D40BC9A2B269AE800D511A4 /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
+		1D40BC9C2B269AF200D511A4 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		1DCBA93B2B1E02D500534397 /* JuiceMaker_Hong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuiceMaker_Hong.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DCBA93E2B1E02D500534397 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1DCBA9402B1E02D500534397 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1DCBA9452B1E02D500534397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1DCBA9472B1E02D600534397 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DCBA94A2B1E02D600534397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1DCBA94C2B1E02D600534397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DCBA9552B1E069E00534397 /* JuiceMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMaker.swift; sourceTree = "<group>"; };
+		1DCBA9572B1E06A900534397 /* FruitStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitStore.swift; sourceTree = "<group>"; };
+		1DCBA9592B1E06BF00534397 /* JuiceMakingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMakingViewController.swift; sourceTree = "<group>"; };
+		1DCBA95B2B1E06CE00534397 /* StockManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockManagementViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DCBA9382B1E02D500534397 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D40BC972B269ABB00D511A4 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				1D40BC982B269AE000D511A4 /* JuiceMenu.swift */,
+				1D40BC9A2B269AE800D511A4 /* Fruit.swift */,
+				1D40BC9C2B269AF200D511A4 /* Error.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		1DCBA9322B1E02D500534397 = {
+			isa = PBXGroup;
+			children = (
+				1DCBA93D2B1E02D500534397 /* JuiceMaker_Hong */,
+				1DCBA93C2B1E02D500534397 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1DCBA93C2B1E02D500534397 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DCBA93B2B1E02D500534397 /* JuiceMaker_Hong.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DCBA93D2B1E02D500534397 /* JuiceMaker_Hong */ = {
+			isa = PBXGroup;
+			children = (
+				1DCBA9542B1E065700534397 /* Model */,
+				1DCBA9532B1E065400534397 /* Views */,
+				1DCBA9522B1E065200534397 /* Controller */,
+				1DCBA94C2B1E02D600534397 /* Info.plist */,
+			);
+			path = JuiceMaker_Hong;
+			sourceTree = "<group>";
+		};
+		1DCBA9522B1E065200534397 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DCBA93E2B1E02D500534397 /* AppDelegate.swift */,
+				1DCBA9402B1E02D500534397 /* SceneDelegate.swift */,
+				1DCBA9592B1E06BF00534397 /* JuiceMakingViewController.swift */,
+				1DCBA95B2B1E06CE00534397 /* StockManagementViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1DCBA9532B1E065400534397 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1DCBA9442B1E02D500534397 /* Main.storyboard */,
+				1DCBA9472B1E02D600534397 /* Assets.xcassets */,
+				1DCBA9492B1E02D600534397 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1DCBA9542B1E065700534397 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1DCBA9552B1E069E00534397 /* JuiceMaker.swift */,
+				1DCBA9572B1E06A900534397 /* FruitStore.swift */,
+				1D40BC972B269ABB00D511A4 /* Enum */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1DCBA93A2B1E02D500534397 /* JuiceMaker_Hong */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DCBA94F2B1E02D600534397 /* Build configuration list for PBXNativeTarget "JuiceMaker_Hong" */;
+			buildPhases = (
+				1DCBA9372B1E02D500534397 /* Sources */,
+				1DCBA9382B1E02D500534397 /* Frameworks */,
+				1DCBA9392B1E02D500534397 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JuiceMaker_Hong;
+			productName = JuiceMaker_Hong;
+			productReference = 1DCBA93B2B1E02D500534397 /* JuiceMaker_Hong.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DCBA9332B1E02D500534397 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					1DCBA93A2B1E02D500534397 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 1DCBA9362B1E02D500534397 /* Build configuration list for PBXProject "JuiceMaker_Hong" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1DCBA9322B1E02D500534397;
+			productRefGroup = 1DCBA93C2B1E02D500534397 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DCBA93A2B1E02D500534397 /* JuiceMaker_Hong */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DCBA9392B1E02D500534397 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DCBA94B2B1E02D600534397 /* LaunchScreen.storyboard in Resources */,
+				1DCBA9482B1E02D600534397 /* Assets.xcassets in Resources */,
+				1DCBA9462B1E02D500534397 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DCBA9372B1E02D500534397 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DCBA93F2B1E02D500534397 /* AppDelegate.swift in Sources */,
+				1DCBA95A2B1E06BF00534397 /* JuiceMakingViewController.swift in Sources */,
+				1D40BC9B2B269AE800D511A4 /* Fruit.swift in Sources */,
+				1DCBA9412B1E02D500534397 /* SceneDelegate.swift in Sources */,
+				1DCBA95C2B1E06CE00534397 /* StockManagementViewController.swift in Sources */,
+				1DCBA9562B1E069E00534397 /* JuiceMaker.swift in Sources */,
+				1DCBA9582B1E06A900534397 /* FruitStore.swift in Sources */,
+				1D40BC9D2B269AF200D511A4 /* Error.swift in Sources */,
+				1D40BC992B269AE000D511A4 /* JuiceMenu.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1DCBA9442B1E02D500534397 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DCBA9452B1E02D500534397 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1DCBA9492B1E02D600534397 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DCBA94A2B1E02D600534397 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DCBA94D2B1E02D600534397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1DCBA94E2B1E02D600534397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1DCBA9502B1E02D600534397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JuiceMaker_Hong/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Jhong.JuiceMaker-Hong";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1DCBA9512B1E02D600534397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JuiceMaker_Hong/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Jhong.JuiceMaker-Hong";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DCBA9362B1E02D500534397 /* Build configuration list for PBXProject "JuiceMaker_Hong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DCBA94D2B1E02D600534397 /* Debug */,
+				1DCBA94E2B1E02D600534397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DCBA94F2B1E02D600534397 /* Build configuration list for PBXNativeTarget "JuiceMaker_Hong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DCBA9502B1E02D600534397 /* Debug */,
+				1DCBA9512B1E02D600534397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1DCBA9332B1E02D500534397 /* Project object */;
+}

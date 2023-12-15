@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "EC614057-EC15-4685-B171-8E9579E39A33"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ABE832A0-CD75-498D-9454-C1AE80360AF5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JuiceMaker_Hong/Controller/JuiceMakingViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "JuiceMakingViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "ABE832A0-CD75-498D-9454-C1AE80360AF5 - f279a2e5ac5053cc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JuiceMaker_Hong.JuiceMakingViewController.numberOfStrawberry.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "JuiceMaker_Hong"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yujaehong/Desktop/JuiceMaker_Hong/JuiceMaker_Hong/Controller/JuiceMakingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "ABE832A0-CD75-498D-9454-C1AE80360AF5 - 8ce826339d396ba8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JuiceMaker_Hong.JuiceMakingViewController.numberOfStrawberry.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "JuiceMaker_Hong"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yujaehong/Desktop/JuiceMaker_Hong/JuiceMaker_Hong/Controller/JuiceMakingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "ABE832A0-CD75-498D-9454-C1AE80360AF5 - efdcd02da1a8b976"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JuiceMaker_Hong.JuiceMakingViewController.numberOfStrawberry.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "JuiceMaker_Hong"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yujaehong/Desktop/JuiceMaker_Hong/JuiceMaker_Hong/Controller/JuiceMakingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "ABE832A0-CD75-498D-9454-C1AE80360AF5 - a9d1e6c2c1f67c89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JuiceMaker_Hong.JuiceMakingViewController.numberOfStrawberry.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "JuiceMaker_Hong"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yujaehong/Desktop/JuiceMaker_Hong/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "ABE832A0-CD75-498D-9454-C1AE80360AF5 - 9369217ecca6a08d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JuiceMaker_Hong.JuiceMakingViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; JuiceMaker_Hong.JuiceMakingViewController"
+                  moduleName = "JuiceMaker_Hong"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yujaehong/Desktop/JuiceMaker_Hong/JuiceMaker_Hong/Controller/JuiceMakingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "ABE832A0-CD75-498D-9454-C1AE80360AF5 - ea608e1d09f2b46"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JuiceMaker_Hong.JuiceMakingViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;JuiceMaker_Hong.JuiceMakingViewController&gt;"
+                  moduleName = "JuiceMaker_Hong"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yujaehong/Desktop/JuiceMaker_Hong/JuiceMaker_Hong/Controller/JuiceMakingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "ABE832A0-CD75-498D-9454-C1AE80360AF5 - efdcd02da1a8b930"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JuiceMaker_Hong.JuiceMakingViewController.numberOfStrawberry.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "JuiceMaker_Hong"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yujaehong/Desktop/JuiceMaker_Hong/JuiceMaker_Hong/Controller/JuiceMakingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "ABE832A0-CD75-498D-9454-C1AE80360AF5 - 9369217ecca6a0cb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JuiceMaker_Hong.JuiceMakingViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; JuiceMaker_Hong.JuiceMakingViewController"
+                  moduleName = "JuiceMaker_Hong"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yujaehong/Desktop/JuiceMaker_Hong/JuiceMaker_Hong/Controller/JuiceMakingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "ABE832A0-CD75-498D-9454-C1AE80360AF5 - ea608e1d09f2b00"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JuiceMaker_Hong.JuiceMakingViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;JuiceMaker_Hong.JuiceMakingViewController&gt;"
+                  moduleName = "JuiceMaker_Hong"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yujaehong/Desktop/JuiceMaker_Hong/JuiceMaker_Hong/Controller/JuiceMakingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "205BA20B-A0F5-4A57-91F9-90EA279FE2A9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JuiceMaker_Hong/Controller/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C761DE8F-819A-41DC-92B2-14D49F21BF46"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JuiceMaker_Hong/Controller/StockManagementViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "cancleButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
