@@ -8,7 +8,14 @@
 import UIKit
 
 // 📖 final 키워드 알아보자!
-final class JuiceMakingViewController: UIViewController {
+final class JuiceMakingViewController: UIViewController, stockDataDelegate {
+    
+    func updateStockData(updatedData: [Fruit : Int]) {
+        showNumberOnLabel(fruits: updatedData)
+        // 🔵
+        juiceMaker.fruitStore.updateInventory(updatedData)
+    }
+    
     // 레이블
     @IBOutlet var numberOfStrawberry: UILabel!
     @IBOutlet var numberOfBanana: UILabel!
@@ -41,7 +48,7 @@ final class JuiceMakingViewController: UIViewController {
         // 옵저버 등록
         registerObserver()
     }
-
+    
     deinit {
         print(#function)
         turnOffObserver()
@@ -72,7 +79,7 @@ extension JuiceMakingViewController {
         }
     }
 }
-    
+
 // MARK: - 버튼 & 알림창
 extension JuiceMakingViewController {
     // 버튼 입력
@@ -115,7 +122,6 @@ extension JuiceMakingViewController {
         
         // 알림창 띄우기
         self.present(generateAlert(by: result), animated: true, completion: nil)
-        
     }
     
     // 알림창 설정
@@ -134,11 +140,11 @@ extension JuiceMakingViewController {
     }
     
     // 재고 수정 버튼 동작 (재고수정화면으로 이동)
-       @objc func stockChangeButtonTapped() {
-           fruitInventoryDataToStockManagementViewController()
-       }
+    @objc func stockChangeButtonTapped() {
+        fruitInventoryDataToStockManagementViewController()
+    }
 }
-   
+
 
 // MARK: - 화면이동
 extension JuiceMakingViewController {
@@ -148,7 +154,7 @@ extension JuiceMakingViewController {
     }
 }
 
-// MARK: - 옵저버
+// MARK: - 옵저버 1
 extension JuiceMakingViewController {
     // 수량 변화 감지 옵저버
     func registerObserver() {
@@ -173,11 +179,18 @@ extension JuiceMakingViewController {
 private extension JuiceMakingViewController {
     func fruitInventoryDataToStockManagementViewController() {
         if let stockManagementVC = self.storyboard?.instantiateViewController(withIdentifier: "StockManagementViewController") as? StockManagementViewController {
+            
+            // 🔴
             stockManagementVC.receivedFruitInventoryData = juiceMaker.fruitStore.inventory
+            
+            // 🔵
+            stockManagementVC.delegate = self
+   
             let stockManagementNavigationController = UINavigationController(rootViewController: stockManagementVC)
             self.present(stockManagementNavigationController, animated: true, completion: nil)
         }
     }
+    
 }
 
 

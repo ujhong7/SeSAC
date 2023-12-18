@@ -26,12 +26,17 @@ class FruitStore {
         return bag // 없데이트된 딕셔너리를 반환 -> reduce 함수는 이 반환값을 다음 순회에 사용하여 값을 누적합니다. -> inventory 프로퍼티에 할당되어 해당 과일의 초기 재고를 나타내게 됩니다.
     }
     
+    // 🔵 재고수정 후 메인화면 돌아오고 다시 재고수정 갔을때 값변화 ⭐️⭐️⭐️⭐️⭐️
+    func updateInventory(_ updatedData: [Fruit: Int]) {
+           inventory = updatedData
+       }
+    
     
 //    private(set)은 속성의 접근 제어 수준을 설정하는 부분입니다.
 //    private(set)은 외부에서는 읽기만 허용하고, 쓰기는 해당 타입 내부에서만 가능하도록 설정합니다. 
 //    즉, 외부에서는 읽기만 가능하며, 내부에서는 읽기와 쓰기가 모두 가능합니다.
     
-    // 과일의 수량 n개를 변경하는 함수
+    // 과일의 수량 n개를 변경하는 함수 🔴
     func changeAmount(_ fruit: Fruit, _ number: Int) {
         inventory[fruit] = number
     }
@@ -58,8 +63,9 @@ class FruitStore {
     
     // 재고 체킹 함수 checkStock
     // amountOfFruitNow: 현재 과일의 수   amountRequired: 필요한 과일의 수
+    // 🔵🔵🔵🔵🔵🔵🔵🔵 > , >=
     private func checkStock(amountOfFruitNow: Int, amountRequired: Int) throws {
-        guard amountOfFruitNow >= amountRequired else {
+        guard amountOfFruitNow >= amountRequired  else {
             throw InventoryManagementError.inventoryError(description: InventoryManagementError.outOfStockMessage)
         }
     }

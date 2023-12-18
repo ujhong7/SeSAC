@@ -397,16 +397,16 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="changeAmountOfBanana" destination="z1k-X4-gK9" id="nSb-xU-qdh"/>
-                        <outlet property="changeAmountOfKiwi" destination="EO0-fc-RHc" id="pqM-aA-Ffs"/>
-                        <outlet property="changeAmountOfMango" destination="iU5-PH-Sc2" id="4dC-N3-7il"/>
-                        <outlet property="changeAmountOfPineApple" destination="9Et-x3-8sQ" id="0Me-UC-5Fa"/>
-                        <outlet property="changeAmountOfStrawberry" destination="dP9-BH-4Du" id="xF0-38-wzM"/>
-                        <outlet property="numberOfBanana" destination="5md-bA-1Ts" id="iPM-jI-NyM"/>
-                        <outlet property="numberOfKiwi" destination="mgB-uX-lxo" id="uA2-zs-7oT"/>
-                        <outlet property="numberOfMango" destination="cDq-QO-xSE" id="UV3-SP-RIB"/>
-                        <outlet property="numberOfPineApple" destination="Fza-eA-Hdg" id="8q0-P0-23D"/>
-                        <outlet property="numberOfStrawberry" destination="Vp5-tJ-wjE" id="I7t-Zz-KNR"/>
+                        <outlet property="changeAmountOfBananaStepper" destination="z1k-X4-gK9" id="nSb-xU-qdh"/>
+                        <outlet property="changeAmountOfKiwiStepper" destination="EO0-fc-RHc" id="pqM-aA-Ffs"/>
+                        <outlet property="changeAmountOfMangoStepper" destination="iU5-PH-Sc2" id="4dC-N3-7il"/>
+                        <outlet property="changeAmountOfPineAppleStepper" destination="9Et-x3-8sQ" id="0Me-UC-5Fa"/>
+                        <outlet property="changeAmountOfStrawberryStepper" destination="dP9-BH-4Du" id="xF0-38-wzM"/>
+                        <outlet property="numberOfBananaLabel" destination="5md-bA-1Ts" id="iPM-jI-NyM"/>
+                        <outlet property="numberOfKiwiLabel" destination="mgB-uX-lxo" id="uA2-zs-7oT"/>
+                        <outlet property="numberOfMangoLabel" destination="cDq-QO-xSE" id="UV3-SP-RIB"/>
+                        <outlet property="numberOfPineAppleLabel" destination="Fza-eA-Hdg" id="8q0-P0-23D"/>
+                        <outlet property="numberOfStrawberryLabel" destination="Vp5-tJ-wjE" id="I7t-Zz-KNR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vhp-co-p1l" sceneMemberID="firstResponder"/>
@@ -441,7 +441,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
