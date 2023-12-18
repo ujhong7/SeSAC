@@ -221,11 +221,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="numberOfBanana" destination="zlr-ce-8pZ" id="4GD-p2-QPM"/>
-                        <outlet property="numberOfKiwi" destination="fTf-SD-fDH" id="Yfl-E5-bLe"/>
-                        <outlet property="numberOfMango" destination="1yu-SQ-8OG" id="Q9p-Dk-K1y"/>
-                        <outlet property="numberOfPineApple" destination="i4s-ng-TJL" id="hEi-3I-3vl"/>
-                        <outlet property="numberOfStrawberry" destination="RuH-PV-kB9" id="dDV-kG-GgL"/>
+                        <outlet property="numberOfBananaLabel" destination="zlr-ce-8pZ" id="4GD-p2-QPM"/>
+                        <outlet property="numberOfKiwiLabel" destination="fTf-SD-fDH" id="Yfl-E5-bLe"/>
+                        <outlet property="numberOfMangoLabel" destination="1yu-SQ-8OG" id="Q9p-Dk-K1y"/>
+                        <outlet property="numberOfPineAppleLabel" destination="i4s-ng-TJL" id="hEi-3I-3vl"/>
+                        <outlet property="numberOfStrawberryLabel" destination="RuH-PV-kB9" id="dDV-kG-GgL"/>
                         <outlet property="orderBananaButton" destination="BJr-DC-Ydr" id="aN4-Br-mjD"/>
                         <outlet property="orderKiwiButton" destination="xUM-UO-HHj" id="M4E-nQ-p1V"/>
                         <outlet property="orderMangoButton" destination="HqO-Ri-Kyv" id="eBF-W8-1dx"/>

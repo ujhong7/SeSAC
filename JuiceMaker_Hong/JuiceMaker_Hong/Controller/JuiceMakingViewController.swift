@@ -8,7 +8,7 @@
 import UIKit
 
 // 📖 final 키워드 알아보자!
-final class JuiceMakingViewController: UIViewController, stockDataDelegate {
+final class JuiceMakingViewController: UIViewController, StockManagementViewControllerDelegate {
     
     func updateStockData(updatedData: [Fruit : Int]) {
         showNumberOnLabel(fruits: updatedData)
@@ -17,11 +17,11 @@ final class JuiceMakingViewController: UIViewController, stockDataDelegate {
     }
     
     // 레이블
-    @IBOutlet var numberOfStrawberry: UILabel!
-    @IBOutlet var numberOfBanana: UILabel!
-    @IBOutlet var numberOfPineApple: UILabel!
-    @IBOutlet var numberOfKiwi: UILabel!
-    @IBOutlet var numberOfMango: UILabel!
+    @IBOutlet var numberOfStrawberryLabel: UILabel!
+    @IBOutlet var numberOfBananaLabel: UILabel!
+    @IBOutlet var numberOfPineAppleLabel: UILabel!
+    @IBOutlet var numberOfKiwiLabel: UILabel!
+    @IBOutlet var numberOfMangoLabel: UILabel!
     
     // 버튼
     @IBOutlet var orderStrawberryButton: UIButton!
@@ -66,15 +66,15 @@ extension JuiceMakingViewController {
         for fruit in fruits {
             switch fruit.key {
             case .strawberry:
-                setup(number: fruit.value, on: numberOfStrawberry)
+                setup(number: fruit.value, on: numberOfStrawberryLabel)
             case .banana:
-                setup(number: fruit.value, on: numberOfBanana)
+                setup(number: fruit.value, on: numberOfBananaLabel)
             case .pineapple:
-                setup(number: fruit.value, on: numberOfPineApple)
+                setup(number: fruit.value, on: numberOfPineAppleLabel)
             case .kiwi:
-                setup(number: fruit.value, on: numberOfKiwi)
+                setup(number: fruit.value, on: numberOfKiwiLabel)
             case .mango:
-                setup(number: fruit.value, on: numberOfMango)
+                setup(number: fruit.value, on: numberOfMangoLabel)
             }
         }
     }
@@ -154,9 +154,8 @@ extension JuiceMakingViewController {
     }
 }
 
-// MARK: - 옵저버 1
+// MARK: - 수량 변화 감지 옵저버
 extension JuiceMakingViewController {
-    // 수량 변화 감지 옵저버
     func registerObserver() {
         NotificationCenter.default.addObserver(self, selector: #selector(didChangeFruitsAmount(_:)), name: Notification.Name("fruitsAmountDidChange"), object: nil)
     }
@@ -182,7 +181,6 @@ private extension JuiceMakingViewController {
             
             // 🔴
             stockManagementVC.receivedFruitInventoryData = juiceMaker.fruitStore.inventory
-            
             // 🔵
             stockManagementVC.delegate = self
    

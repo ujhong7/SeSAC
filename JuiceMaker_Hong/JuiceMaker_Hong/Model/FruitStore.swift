@@ -36,10 +36,10 @@ class FruitStore {
 //    private(set)은 외부에서는 읽기만 허용하고, 쓰기는 해당 타입 내부에서만 가능하도록 설정합니다. 
 //    즉, 외부에서는 읽기만 가능하며, 내부에서는 읽기와 쓰기가 모두 가능합니다.
     
-    // 과일의 수량 n개를 변경하는 함수 🔴
-    func changeAmount(_ fruit: Fruit, _ number: Int) {
-        inventory[fruit] = number
-    }
+//    // 과일의 수량 n개를 변경하는 함수 🔴
+//    func changeAmount(_ fruit: Fruit, _ number: Int) {
+//        inventory[fruit] = number
+//    }
     
     // 🔴 수량 변화 알림
     private func sendNotification(about fruit: Fruit, number: Int) {
@@ -63,7 +63,6 @@ class FruitStore {
     
     // 재고 체킹 함수 checkStock
     // amountOfFruitNow: 현재 과일의 수   amountRequired: 필요한 과일의 수
-    // 🔵🔵🔵🔵🔵🔵🔵🔵 > , >=
     private func checkStock(amountOfFruitNow: Int, amountRequired: Int) throws {
         guard amountOfFruitNow >= amountRequired  else {
             throw InventoryManagementError.inventoryError(description: InventoryManagementError.outOfStockMessage)

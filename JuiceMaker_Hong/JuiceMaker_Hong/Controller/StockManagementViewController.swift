@@ -7,12 +7,11 @@
 
 import UIKit
 
-protocol stockDataDelegate: AnyObject {
+protocol StockManagementViewControllerDelegate: AnyObject {
     func updateStockData(updatedData: [Fruit: Int])
 }
 
 class StockManagementViewController: UIViewController {
-    
     @IBOutlet var numberOfStrawberryLabel: UILabel!
     @IBOutlet var numberOfBananaLabel: UILabel!
     @IBOutlet var numberOfPineAppleLabel: UILabel!
@@ -29,14 +28,13 @@ class StockManagementViewController: UIViewController {
         navigationController?.dismiss(animated: true, completion: nil)
     }
     
-    // 🔵
     @IBAction func doneButton(_ sender: Any) {
         print("완료버튼눌림")
         delegate?.updateStockData(updatedData: receivedFruitInventoryData)
         navigationController?.dismiss(animated: true, completion: nil)
     }
     
-    weak var delegate: stockDataDelegate?
+    weak var delegate: StockManagementViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,13 +47,14 @@ class StockManagementViewController: UIViewController {
     
     deinit {
         print(#function)
-        print("StockManagementViewController 닫힘")
         print("수정된 재고: \(receivedFruitInventoryData)")
     }
     
     var receivedFruitInventoryData: [Fruit:Int] = [:]
-    
-    // MARK: - 레이블 셋팅
+}
+
+// MARK: - 레이블 셋팅
+extension StockManagementViewController {
     func setUp(number: Int, on label:UILabel) {
         label.text = String(number)
     }
@@ -76,8 +75,10 @@ class StockManagementViewController: UIViewController {
             }
         }
     }
-    
-    // MARK: - <#내용입력#>
+}
+
+// MARK: - 스테퍼 세팅
+extension StockManagementViewController {
     func setUpStepperTargets() {
         changeAmountOfStrawberryStepper.addTarget(self, action: #selector(stepperValueChanged(_:)), for: .valueChanged)
         changeAmountOfBananaStepper.addTarget(self, action: #selector(stepperValueChanged(_:)), for: .valueChanged)
@@ -86,16 +87,6 @@ class StockManagementViewController: UIViewController {
         changeAmountOfMangoStepper.addTarget(self, action: #selector(stepperValueChanged(_:)), for: .valueChanged)
     }
     
-    func setUpStepperAmount() {
-        changeAmountOfStrawberryStepper.value = Double(receivedFruitInventoryData[.strawberry] ?? 0)
-        changeAmountOfBananaStepper.value = Double(receivedFruitInventoryData[.banana] ?? 0)
-        changeAmountOfPineAppleStepper.value = Double(receivedFruitInventoryData[.pineapple] ?? 0)
-        changeAmountOfKiwiStepper.value = Double(receivedFruitInventoryData[.kiwi] ?? 0)
-        changeAmountOfMangoStepper.value = Double(receivedFruitInventoryData[.mango] ?? 0)
-    }
-    
-    
-    // 스테퍼 값 변경 액션
     @objc func stepperValueChanged(_ stepper: UIStepper) {
         switch stepper {
         case changeAmountOfStrawberryStepper:
@@ -116,7 +107,13 @@ class StockManagementViewController: UIViewController {
         default:
             break
         }
-        
     }
     
+    func setUpStepperAmount() {
+        changeAmountOfStrawberryStepper.value = Double(receivedFruitInventoryData[.strawberry] ?? 0)
+        changeAmountOfBananaStepper.value = Double(receivedFruitInventoryData[.banana] ?? 0)
+        changeAmountOfPineAppleStepper.value = Double(receivedFruitInventoryData[.pineapple] ?? 0)
+        changeAmountOfKiwiStepper.value = Double(receivedFruitInventoryData[.kiwi] ?? 0)
+        changeAmountOfMangoStepper.value = Double(receivedFruitInventoryData[.mango] ?? 0)
+    }
 }
