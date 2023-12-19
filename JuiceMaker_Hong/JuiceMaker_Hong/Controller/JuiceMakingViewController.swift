@@ -9,7 +9,6 @@ import UIKit
 
 // 📖 final 키워드 알아보자!
 final class JuiceMakingViewController: UIViewController, StockManagementViewControllerDelegate {
-    
     func updateStockData(updatedData: [Fruit : Int]) {
         showNumberOnLabel(fruits: updatedData)
         // 🔵
@@ -143,12 +142,7 @@ extension JuiceMakingViewController {
     @objc func stockChangeButtonTapped() {
         fruitInventoryDataToStockManagementViewController()
     }
-}
-
-
-// MARK: - 화면이동
-extension JuiceMakingViewController {
-    // 알림창 "예" 눌렀을 시 재고수정화면으로 이동
+    
     func transitionToStockManagement(_ sender: UIAlertAction) {
         fruitInventoryDataToStockManagementViewController()
     }
@@ -174,11 +168,10 @@ extension JuiceMakingViewController {
     }
 }
 
-// MARK: - 화면이동시 데이터 전달
+// MARK: - 화면이동
 private extension JuiceMakingViewController {
     func fruitInventoryDataToStockManagementViewController() {
         if let stockManagementVC = self.storyboard?.instantiateViewController(withIdentifier: "StockManagementViewController") as? StockManagementViewController {
-            
             // 🔴
             stockManagementVC.receivedFruitInventoryData = juiceMaker.fruitStore.inventory
             // 🔵

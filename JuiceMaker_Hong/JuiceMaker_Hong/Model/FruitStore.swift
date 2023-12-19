@@ -7,8 +7,7 @@
 
 import Foundation
 
-class FruitStore {
-    
+final class FruitStore {
     // 에러
     enum InventoryManagementError : Error {
         fileprivate static let outOfStockMessage = "재료가 모자라요. 재고를 수정할까요?"

@@ -7,9 +7,7 @@
 
 import Foundation
 
-
 struct JuiceMaker {
-    
     // 주스메이킹 결과
     enum JuiceMakingResult {
         case success(message: String)

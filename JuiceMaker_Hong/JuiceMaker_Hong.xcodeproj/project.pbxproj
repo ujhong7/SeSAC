@@ -78,6 +78,8 @@
 		1DCBA93D2B1E02D500534397 /* JuiceMaker_Hong */ = {
 			isa = PBXGroup;
 			children = (
+				1DCBA93E2B1E02D500534397 /* AppDelegate.swift */,
+				1DCBA9402B1E02D500534397 /* SceneDelegate.swift */,
 				1DCBA9542B1E065700534397 /* Model */,
 				1DCBA9532B1E065400534397 /* Views */,
 				1DCBA9522B1E065200534397 /* Controller */,
@@ -89,8 +91,6 @@
 		1DCBA9522B1E065200534397 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1DCBA93E2B1E02D500534397 /* AppDelegate.swift */,
-				1DCBA9402B1E02D500534397 /* SceneDelegate.swift */,
 				1DCBA9592B1E06BF00534397 /* JuiceMakingViewController.swift */,
 				1DCBA95B2B1E06CE00534397 /* StockManagementViewController.swift */,
 			);
