@@ -24,11 +24,10 @@ class StockManagementViewController: UIViewController {
     @IBOutlet var changeAmountOfKiwiStepper: UIStepper!
     @IBOutlet var changeAmountOfMangoStepper: UIStepper!
     
-    @IBAction func cancleButton(_ sender: Any) {
+    @IBAction func cancleButtonTapped(_ sender: Any) {
         navigationController?.dismiss(animated: true, completion: nil)
     }
-    
-    @IBAction func doneButton(_ sender: Any) {
+    @IBAction func doneButtonTapped(_ sender: Any) {
         print("완료버튼눌림")
         delegate?.updateStockData(updatedData: receivedFruitInventoryData)
         navigationController?.dismiss(animated: true, completion: nil)
@@ -105,7 +104,7 @@ extension StockManagementViewController {
             numberOfMangoLabel.text = "\(Int(stepper.value))"
             receivedFruitInventoryData[.mango] = Int(stepper.value)
         default:
-            break
+            print("Error")
         }
     }
     

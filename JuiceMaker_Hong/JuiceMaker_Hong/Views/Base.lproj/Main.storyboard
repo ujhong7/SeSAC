@@ -387,12 +387,12 @@
                     <navigationItem key="navigationItem" title="재고 수정" id="Ehg-13-DjJ">
                         <barButtonItem key="leftBarButtonItem" title="취소" id="L0B-1v-ddk">
                             <connections>
-                                <action selector="cancleButton:" destination="zKz-Ga-B1j" id="AH3-Ec-f9d"/>
+                                <action selector="cancleButtonTapped:" destination="zKz-Ga-B1j" id="AH3-Ec-f9d"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="완료" id="JAA-t7-t6g">
                             <connections>
-                                <action selector="doneButton:" destination="zKz-Ga-B1j" id="Nqy-1J-WSV"/>
+                                <action selector="doneButtonTapped:" destination="zKz-Ga-B1j" id="Nqy-1J-WSV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

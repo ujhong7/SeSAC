@@ -8,13 +8,7 @@
 import UIKit
 
 // 📖 final 키워드 알아보자!
-final class JuiceMakingViewController: UIViewController, StockManagementViewControllerDelegate {
-    func updateStockData(updatedData: [Fruit : Int]) {
-        showNumberOnLabel(fruits: updatedData)
-        // 🔵
-        juiceMaker.fruitStore.updateInventory(updatedData)
-    }
-    
+final class JuiceMakingViewController: UIViewController {
     // 레이블
     @IBOutlet var numberOfStrawberryLabel: UILabel!
     @IBOutlet var numberOfBananaLabel: UILabel!
@@ -181,8 +175,13 @@ private extension JuiceMakingViewController {
             self.present(stockManagementNavigationController, animated: true, completion: nil)
         }
     }
-    
 }
 
-
-
+// MARK: - 데이터전달 델리게이트
+extension JuiceMakingViewController: StockManagementViewControllerDelegate {
+    func updateStockData(updatedData: [Fruit : Int]) {
+        showNumberOnLabel(fruits: updatedData)
+        // 🔵
+        juiceMaker.fruitStore.updateInventory(updatedData)
+    }
+}

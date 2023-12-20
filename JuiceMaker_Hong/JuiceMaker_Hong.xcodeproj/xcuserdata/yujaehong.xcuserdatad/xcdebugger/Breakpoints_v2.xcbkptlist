@@ -14,8 +14,8 @@
             filePath = "JuiceMaker_Hong/Controller/JuiceMakingViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
             landmarkName = "JuiceMakingViewController"
             landmarkType = "3">
             <Locations>
@@ -169,7 +169,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
             endingLineNumber = "29"
-            landmarkName = "cancleButton(_:)"
+            landmarkName = "cancleButtonTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
