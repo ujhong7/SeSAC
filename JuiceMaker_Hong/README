@@ -3,7 +3,7 @@
 
 
 1️⃣  **CaseIterable**, **CustomStringConvertible**
-![image](https://github.com/ujhong7/SeSAC/assets/108393988/e00df4f2-24cb-490b-9feb-b172c4a0daa3)
+<img width="529" alt="image" src="https://github.com/ujhong7/SeSAC/assets/108393988/a57621ab-c7fc-426e-979b-4827605289d5">
 
 1. **`enum Fruit: String, CaseIterable, CustomStringConvertible`**
     - **`enum Fruit`**은 과일을 나타내는 열거형입니다.
