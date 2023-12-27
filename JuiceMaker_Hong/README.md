@@ -253,7 +253,12 @@ class StockManagementViewController: UIViewController {
 				...
 				...
 }
+
 ```
+1. **프로토콜 정의:**
+    - **`StockManagementViewControllerDelegate`** 프로토콜은 **쥬스 메이킹 뷰 컨트롤러가 채택**하는 프로토콜로, **재고 관리 뷰 컨트롤러에서 발생**한 **데이터 변경 이벤트를 처리**하기 위한 **규약**을 정의합니다.
+2. **StockManagementViewController 클래스:**
+    - **`StockManagementViewController`**는 완료 버튼이 눌렸을 때, **델리게이트에게 데이터를 전달**하고, 모달로 표시된 화면을 닫는 역할을 합니다.
 
 ```swift
  JuiceMakingViewController: StockManagementViewControllerDelegate {
@@ -266,12 +271,9 @@ class StockManagementViewController: UIViewController {
         juiceMaker.fruitStore.updateInventory(updatedData)
     }
 }
+
 ```
 
-1. **프로토콜 정의:**
-    - **`StockManagementViewControllerDelegate`** 프로토콜은 **쥬스 메이킹 뷰 컨트롤러가 채택**하는 프로토콜로, **재고 관리 뷰 컨트롤러에서 발생**한 **데이터 변경 이벤트를 처리**하기 위한 **규약**을 정의합니다.
-2. **StockManagementViewController 클래스:**
-    - **`StockManagementViewController`**는 완료 버튼이 눌렸을 때, **델리게이트에게 데이터를 전달**하고, 모달로 표시된 화면을 닫는 역할을 합니다.
 3. **JuiceMakingViewController 클래스:**
     - **`JuiceMakingViewController`**는 **`StockManagementViewControllerDelegate`** **프로토콜을 채택**하여, 델리게이트로 등록되어 **데이터 변경 이벤트를 수신 ✅**할 수 있습니다.
 4. **데이터 전달 과정:**
