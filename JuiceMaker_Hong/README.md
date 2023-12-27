@@ -3,7 +3,20 @@
 
 
 1️⃣  **CaseIterable**, **CustomStringConvertible**
-<img width="529" alt="image" src="https://github.com/ujhong7/SeSAC/assets/108393988/a57621ab-c7fc-426e-979b-4827605289d5">
+
+```swift
+enum Fruit: String, CaseIterable, CustomStringConvertible {
+    case strawberry = "딸기"
+    case banana = "바나나"
+    case pineapple = "파인애플"
+    case kiwi = "키위"
+    case mango = "망고"
+    
+    var description: String {
+        return self.rawValue
+    }
+}
+```
 
 1. **`enum Fruit: String, CaseIterable, CustomStringConvertible`**
     - **`enum Fruit`**은 과일을 나타내는 열거형입니다.
@@ -430,3 +443,5 @@ struct JuiceMaker {
     - 은닉된 정보는 외부로 노출되지 않기 때문에 **보안이 강화**됩니다. 중요한 데이터나 동작을 외부로부터 숨길 수 있습니다.
 
 캡슐화와 은닉화는 객체 지향 프로그래밍의 핵심 개념으로, 코드의 **안정성**과 **유지보수성**을 높이는 데 기여합니다.
+
+---
