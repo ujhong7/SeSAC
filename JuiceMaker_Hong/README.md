@@ -1,6 +1,5 @@
-쥬스자판기 
-23.12.04 ~ 12.21
-
+# 쥬스자판기 
+## 23.12.04 ~ 12.21
 
 1️⃣  **CaseIterable**, **CustomStringConvertible**
 
@@ -221,7 +220,7 @@ func fruitInventoryDataToStockManagementViewController() {
     - **`self.storyboard?.instantiateViewController(withIdentifier:)`**를 사용하여 스토리보드에서 "**StockManagementViewController**" **식별자를 가진 뷰 컨트롤러**를 **인스턴스화**합니다.
     - 이 메서드는 **스토리보드에서 지정된 식별자**에 해당하는 뷰 컨트롤러를 가져오는 역할을 합니다
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/eb8d5b3d-4890-46c5-ad1c-f468747d681d/0650a906-6552-497e-8983-90c7d9d3ddc2/Untitled.png)
+![image](https://github.com/ujhong7/SeSAC/assets/108393988/6039079c-1545-46d9-b102-62f140e9ae3c)
 
 1. **데이터 전달:**
     - **`stockManagementVC.receivedFruitInventoryData`**를 통해 생성된 **`StockManagementViewController`**의 프로퍼티에 **주스 메이커의 과일 재고 데이터**를 **직접 전달**합니다.
