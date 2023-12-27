@@ -3,20 +3,7 @@
 
 
 1️⃣  **CaseIterable**, **CustomStringConvertible**
-
-```swift
-enum Fruit: String, CaseIterable, CustomStringConvertible {
-    case strawberry = "딸기"
-    case banana = "바나나"
-    case pineapple = "파인애플"
-    case kiwi = "키위"
-    case mango = "망고"
-    
-    var description: String {
-        return self.rawValue
-    }
-}
-```
+![image](https://github.com/ujhong7/SeSAC/assets/108393988/e00df4f2-24cb-490b-9feb-b172c4a0daa3)
 
 1. **`enum Fruit: String, CaseIterable, CustomStringConvertible`**
     - **`enum Fruit`**은 과일을 나타내는 열거형입니다.
