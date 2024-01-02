@@ -16,3 +16,4 @@ enum Fruit: String, CaseIterable, CustomStringConvertible {
         return self.rawValue
     }
 }
+

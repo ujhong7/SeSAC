@@ -35,7 +35,7 @@ final class FruitStore {
 //    private(set)은 외부에서는 읽기만 허용하고, 쓰기는 해당 타입 내부에서만 가능하도록 설정합니다. 
 //    즉, 외부에서는 읽기만 가능하며, 내부에서는 읽기와 쓰기가 모두 가능합니다.
     
-    // 🔴 수량 변화 알림
+    // 🔴 수량 변화 옵저버 post
     private func sendNotification(about fruit: Fruit, number: Int) {
         NotificationCenter.default.post(name: Notification.Name("fruitsAmountDidChange"), object: nil, userInfo: [fruit: number])
     }

@@ -30,7 +30,7 @@ final class JuiceMakingViewController: UIViewController {
     // 쥬스메이커 생성
     // 📖 private 키워드
     private let juiceMaker = JuiceMaker(fruitStore: FruitStore())
-    
+   
     // 📖 왜 override를 해야하며 super.viewDidLoad()가 없으면 실제 어떤일이 일어나나요?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -120,6 +120,7 @@ extension JuiceMakingViewController {
     // 알림창 설정
     func generateAlert(by result: JuiceMaker.JuiceMakingResult) -> UIAlertController {
         let alert: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        
         switch result {
         case .success(let message):
             alert.message = message
@@ -166,9 +167,9 @@ extension JuiceMakingViewController {
 private extension JuiceMakingViewController {
     func fruitInventoryDataToStockManagementViewController() {
         if let stockManagementVC = self.storyboard?.instantiateViewController(withIdentifier: "StockManagementViewController") as? StockManagementViewController {
-            // 🔴
+            // 🔴 데이터 직접 넣어줌
             stockManagementVC.receivedFruitInventoryData = juiceMaker.fruitStore.inventory
-            // 🔵
+            // 🔵 델리게이트 패턴
             stockManagementVC.delegate = self
    
             let stockManagementNavigationController = UINavigationController(rootViewController: stockManagementVC)
@@ -181,7 +182,7 @@ private extension JuiceMakingViewController {
 extension JuiceMakingViewController: StockManagementViewControllerDelegate {
     func updateStockData(updatedData: [Fruit : Int]) {
         showNumberOnLabel(fruits: updatedData)
-        // 🔵
+        // 🔵 델리게이트 패턴 데이터 변경
         juiceMaker.fruitStore.updateInventory(updatedData)
     }
 }
