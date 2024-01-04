@@ -76,6 +76,7 @@ final class ViewController: UIViewController {
         print(#function)
         // 다음화면으로 이동 (멤버는 전달하지 않음)
         let detailVC = DetailViewController()
+        detailVC.addDelegate = self
         
         // 화면이동
         navigationController?.pushViewController(detailVC, animated: true)
@@ -108,42 +109,48 @@ extension ViewController: UITableViewDelegate {
     // 셀이 선택이 되었을때 어떤 동작을 할 것인지
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(#function)
-        // 다음화면으로 이동
-        let detailVC = DetailViewController()
+        
+        let contactID = contactIDListManager.getcontactID(index: indexPath.row)
+        let detailVC = DetailViewController(index: indexPath.row, contactID: contactID)
         
         // 다음 화면의 대리자 설정 (다음 화면의 대리자는 지금 현재의 뷰컨트롤러)
-        detailVC.delegate = self
-        
-        // 다음 화면에 멤버를 전달
-        let currentContactID = contactIDListManager.getContactIDList()[indexPath.row]
-        detailVC.contactID = currentContactID
-        
+        detailVC.updateDelegate = self
+     
         // 화면이동
         navigationController?.pushViewController(detailVC, animated: true)
-        //show(detailVC, sender: nil)
+    }
+    
+    // 🔴
+    // 스와이프하여 삭제하는 기능 추가
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (_, _, completionHandler) in
+            // 삭제 액션 수행
+            self.contactIDListManager.removeContactID(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            completionHandler(true)
+        }
+        let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction])
+        return swipeConfiguration
     }
 }
 
 
-// MARK: - ContactIDDelegate 데이터 추가,수정
-extension ViewController: DetailViewControllerDelegate {
+// MARK: - Delegate 
+extension ViewController: AddDelegate {
     func addNewMember(_ contactID: ContactID) {
-        print(#function)
-        // 데이터 추가
         contactIDListManager.makeNewContactID(contactID)
-        // 테이블뷰를 다시 로드 (다시 그리기)
         tableView.reloadData()
     }
-    
-    func update(index: Int, _ contactID: ContactID) {
-        print(#function)
-        // 데이터 정보 업데이트
-        contactIDListManager.updateMemberInfo(index: index, contactID)
-        // 테이블뷰를 다시 로드 (다시 그리기)
-        tableView.reloadData()
-    }
-    
 }
+
+extension ViewController: UpdateDelegate {
+    func update(index: Int, _ contactID: ContactID) {
+        contactIDListManager.updateMemberInfo(index: index,
+                                              contactID)
+        tableView.reloadData()
+    }
+}
+
 
 
 

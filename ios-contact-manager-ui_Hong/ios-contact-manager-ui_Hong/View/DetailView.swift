@@ -15,19 +15,21 @@ final class DetailView: UIView {
     // 속성감시자도 (저장 속성을 관찰하는) 어쨌든 자체는 메서드임
     var contactID: ContactID? {
         didSet {
-            guard let contactID = contactID else {
-                // 데이터가 없으면 (즉, 새로운 데이터를 추가할 때의 상황)
-                
-                // 데이터가 없으면 버튼을 "SAVE"라고 셋팅
+            if let contactID = contactID {
+                /*
+                 🐧 .text 는 어차피 String 인데 왜 "\()" 모양으로 만들었는지?
+                최대한 깔끔하게 보여야 읽는 사람이 보기 좋게 읽힘. 의도적으로 좀 더 괜찮은 코드가 없을지 생각해야함
+                 강제 언레핑은 지양해야함. if let 으로 풀어보기
+                 Int -> String, String -> Int 와 같은 형 변환은 가능하면 extension 에 함수를 만들어서 처리할 수 있게 하기
+                 아래의 toString 을 클릭해서 보도록
+                 */
+                nameTextField.text = contactID.name
+                ageTextField.text = contactID.age?.toString()
+                phoneNumberTextField.text = contactID.phoneNumber
+            } else {
                 saveButton.setTitle("SAVE", for: .normal)
-                
                 return
             }
-            // 멤버가 있으면
-            nameTextField.text = "\(contactID.name!)"
-            ageTextField.text = "\(contactID.age != nil ? "\(contactID.age!)" : "")"
-            phoneNumberTextField.text = "\(contactID.phoneNumber!)"
-            
         }
     }
     
@@ -204,3 +206,9 @@ final class DetailView: UIView {
     
 }
 
+extension Int {
+    func toString() -> String {
+        var inputString = String(self)
+        return inputString
+    }
+}

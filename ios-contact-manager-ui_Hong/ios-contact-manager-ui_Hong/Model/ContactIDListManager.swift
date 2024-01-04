@@ -16,6 +16,11 @@ final class ContactIDListManager {
     // 데이터 리스트를 저장하기 위한 배열
     private var contactIDList: [ContactID] = []
     
+    // 🐧  computed property 를 최대한 활용해서 사용하는 곳에서 불필요한 코드를 줄여보기
+    var contactIDListCount: Int {
+        return contactIDList.count
+    }
+    
     // 데이터 리스트 만들기
     func makeContactIDListDatas(){
         contactIDList = [
@@ -33,6 +38,10 @@ final class ContactIDListManager {
         return contactIDList
     }
     
+    func getcontactID(index: Int) -> ContactID {
+        return contactIDList[index]
+    }
+    
     // 새로운 데이터 만들기
     func makeNewContactID(_ contactID: ContactID){
         print(#function)
@@ -42,6 +51,11 @@ final class ContactIDListManager {
     // 데이터 정보 업데이트
     func updateMemberInfo(index: Int, _ contactID: ContactID){
         contactIDList[index] = contactID
+    }
+    
+    // 데이터 삭제
+    func removeContactID(at index: Int) {
+        contactIDList.remove(at: index)
     }
     
     // 특정 멤버 얻기
