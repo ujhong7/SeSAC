@@ -46,27 +46,16 @@ class DetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - viewDidLoad
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view = detailView
-        updateContactData()
-        saveButtonAction()
-
-        view.backgroundColor = .yellow
-    }
+    // 네비게이션바에 넣기 위한
+    lazy var saveButton: UIBarButtonItem = {
+        let title = contactID == nil ? "SAVE" : "UPDATE"
+        let button = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(saveButtonTapped))
+        return button
+    }()
     
-    // 데이터를 뷰에 전달
-    func updateContactData() {
-        detailView.contactID = contactID
-    }
-    
-    private func saveButtonAction() {
-        detailView.saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
-    }
-    
-    @objc func saveButtonTapped() {
+    // MARK: - saveButtonTapped
+    @objc func saveButtonTapped(){
+        print(#function)
         if contactID == nil {
             // 데이터 없을 경우 (새로운 데이터 추가화면)
             print("saveButtonTapped")
@@ -85,7 +74,7 @@ class DetailViewController: UIViewController {
             contactID.name = detailView.nameTextField.text ?? ""
             contactID.age = Int(detailView.ageTextField.text ?? "") ?? 0
             contactID.phoneNumber = detailView.phoneNumberTextField.text ?? ""
-    
+            
             // 🔴
             updateContactData()
             updateDelegate?.update(index: index, contactID)
@@ -93,4 +82,23 @@ class DetailViewController: UIViewController {
         // (일 처리를 다한 후에) 전화면으로 돌아가기
         self.navigationController?.popViewController(animated: true)
     }
+    
+    // MARK: - viewDidLoad
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view = detailView
+        updateContactData()
+        
+        view.backgroundColor = .yellow
+        
+        // 네비게이션바 오른쪽 상단 버튼 설정
+        self.navigationItem.rightBarButtonItem = self.saveButton
+    }
+    
+    // 데이터를 뷰에 전달
+    func updateContactData() {
+        detailView.contactID = contactID
+    }
+    
 }

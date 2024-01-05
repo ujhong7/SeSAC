@@ -8,15 +8,10 @@
 import UIKit
 
 final class ContactIDListManager {
-    //- 연락처 보기
-    //- 연락처 추가
-    //- 연락처 삭제
-    //- 연락처 변경(optional)
-    
     // 데이터 리스트를 저장하기 위한 배열
     private var contactIDList: [ContactID] = []
     
-    // 🐧  computed property 를 최대한 활용해서 사용하는 곳에서 불필요한 코드를 줄여보기
+    // 🐧 computed property 를 최대한 활용해서 사용하는 곳에서 불필요한 코드를 줄여보기
     var contactIDListCount: Int {
         return contactIDList.count
     }
@@ -34,9 +29,9 @@ final class ContactIDListManager {
     }
     
     // 전체 데이터 리스트 얻기
-    func getContactIDList() -> [ContactID] {
-        return contactIDList
-    }
+//    func getContactIDList() -> [ContactID] {
+//        return contactIDList
+//    }
     
     func getcontactID(index: Int) -> ContactID {
         return contactIDList[index]
@@ -44,7 +39,6 @@ final class ContactIDListManager {
     
     // 새로운 데이터 만들기
     func makeNewContactID(_ contactID: ContactID){
-        print(#function)
         contactIDList.append(contactID)
     }
     

@@ -36,6 +36,7 @@ final class ViewController: UIViewController {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()  // 불투명으로
         appearance.backgroundColor = .red
+        title = "연락처"
         navigationController?.navigationBar.tintColor = .systemBlue
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
@@ -76,6 +77,7 @@ final class ViewController: UIViewController {
         print(#function)
         // 다음화면으로 이동 (멤버는 전달하지 않음)
         let detailVC = DetailViewController()
+        detailVC.title = "새 연락처"
         detailVC.addDelegate = self
         
         // 화면이동
@@ -87,7 +89,7 @@ final class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource {
     // 테이블뷰에 몇개의 데이터를 표시할 것인지(셀이 몇개인지)
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contactIDListManager.getContactIDList().count
+        return contactIDListManager.contactIDListCount
     }
     
     // 셀의 구성(셀에 표시하고자 하는 데이터 표시)
@@ -96,7 +98,7 @@ extension ViewController: UITableViewDataSource {
         // (사전에 셀을 등록하는 과정이 내부 매커니즘에 존재)
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactIDCell", for: indexPath) as! TableViewCell
         
-        // 셀에다가 멤버를 전달 (멤버만 전달하먄, 화면에 표시하도록 구현 ⭐️ 셀에 didSet으로)
+        // 셀에다가 멤버를 전달 (멤버만 전달하면, 화면에 표시하도록 구현 ⭐️ 셀에 didSet으로)
         cell.contactID = contactIDListManager[indexPath.row]
         cell.selectionStyle = .none
         
@@ -112,6 +114,7 @@ extension ViewController: UITableViewDelegate {
         
         let contactID = contactIDListManager.getcontactID(index: indexPath.row)
         let detailVC = DetailViewController(index: indexPath.row, contactID: contactID)
+        detailVC.title = "기존 연락처"
         
         // 다음 화면의 대리자 설정 (다음 화면의 대리자는 지금 현재의 뷰컨트롤러)
         detailVC.updateDelegate = self
@@ -120,10 +123,9 @@ extension ViewController: UITableViewDelegate {
         navigationController?.pushViewController(detailVC, animated: true)
     }
     
-    // 🔴
     // 스와이프하여 삭제하는 기능 추가
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (_, _, completionHandler) in
+        let deleteAction = UIContextualAction(style: .destructive, title: "삭제") { (_, _, completionHandler) in
             // 삭제 액션 수행
             self.contactIDListManager.removeContactID(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
