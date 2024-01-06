@@ -11,6 +11,9 @@ final class ViewController: UIViewController {
     // 테이블뷰
     private let tableView = UITableView()
     
+    // 서치바
+    let searchController = UISearchController(searchResultsController: nil)
+    
     // MVC패턴을 위한 데이터 매니저 (배열 관리 - 데이터)
     var contactIDListManager = ContactIDListManager()
     
@@ -53,6 +56,10 @@ final class ViewController: UIViewController {
         
         // 셀의 등록 ⭐️ (타입인스턴스 - 메타타입)
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "ContactIDCell")
+        
+        // 테이블뷰 위에 서치바
+        tableView.tableHeaderView = searchController.searchBar
+        
     }
     
     func setupDatas(){
@@ -118,7 +125,7 @@ extension ViewController: UITableViewDelegate {
         
         // 다음 화면의 대리자 설정 (다음 화면의 대리자는 지금 현재의 뷰컨트롤러)
         detailVC.updateDelegate = self
-     
+        
         // 화면이동
         navigationController?.pushViewController(detailVC, animated: true)
     }
@@ -136,8 +143,22 @@ extension ViewController: UITableViewDelegate {
     }
 }
 
+// MARK: - UISearchResultsUpdating
+extension ViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        // 🔴 검색어에 따라 결과 필터링 및 테이블뷰 업데이트
+    }
+}
 
-// MARK: - Delegate 
+// MARK: - UIScrollViewDelegate
+extension ViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // 🔴 기존에는 서치바 없다가 스크롤로 서치바 나타나게끔
+    }
+}
+
+
+// MARK: - Delegate
 extension ViewController: AddDelegate {
     func addNewMember(_ contactID: ContactID) {
         contactIDListManager.makeNewContactID(contactID)
@@ -152,8 +173,3 @@ extension ViewController: UpdateDelegate {
         tableView.reloadData()
     }
 }
-
-
-
-
-

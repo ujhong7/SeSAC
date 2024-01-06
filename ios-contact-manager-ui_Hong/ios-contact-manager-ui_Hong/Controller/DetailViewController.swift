@@ -36,6 +36,7 @@ class DetailViewController: UIViewController {
     // 🐧 이렇게 index, contactID 에 값을 넣어주는건 DetailViewController 안에서 하기
     // 굳이 이 코드를 외부에서 사용하는 ViewController 가 알아야 할 필요가 있을까?
     // 이런 사고를 계속해봐야함. 추상화, 캡슐화에 대해 검색해보기
+    // ⭐️ 다시 질문 무슨내용인지...
     convenience init(index: Int, contactID: ContactID) {
         self.init()
         self.index = index
